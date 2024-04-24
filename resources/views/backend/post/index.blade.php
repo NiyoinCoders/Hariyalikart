@@ -20,7 +20,7 @@
             <tr>
               <th>#</th>
               <th>Title</th>
-              <th>Category</th>
+             <!--  <th>Category</th> -->
               <th>Tag</th>
               <th>Author</th>
               <th>Photo</th>
@@ -40,7 +40,7 @@
                 <tr>
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
-                    <td>{{$post->cat_info->title}}</td>
+                 <!--    <td>{{$post->title}}</td> -->
                     <td>{{$post->tags}}</td>
 
                     <td>

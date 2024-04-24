@@ -8,7 +8,7 @@ use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\PostTag;
 use App\User;
-
+use URL;
 class PostController extends Controller
 {
     /**
@@ -50,15 +50,16 @@ class PostController extends Controller
             'quote'=>'string|nullable',
             'summary'=>'string|required',
             'description'=>'string|nullable',
-            'photo'=>'string|nullable',
+            'photo'=>'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'tags'=>'nullable',
             'added_by'=>'nullable',
             'post_cat_id'=>'nullable',
             'status'=>'required|in:active,inactive'
         ]);
 
-        $data=$request->all();
-
+      
+/* print_r($data);
+exit();
         if($request->hasFile('photo')){
             $image = $request->file('photo');
             $image_name = $image->getClientOriginalName();
@@ -66,18 +67,31 @@ class PostController extends Controller
 
            $image_path = "/blog/" . $image_name;
 
+    } */
 
-    }
-    if($data['photo']){
+    
+        $photo = $request->file('photo');
+        $image_name = date('YmdHis') . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
+        $photo->move(public_path('blog'), $image_name);
+        $data['photo'] =  $url = URL::to("/blog/$image_name");
+    
+
+   /*  if($data['photo']){
         $data['photo'] = "/blog/" . $image_name;
-    }
-
+    } */
+  
+    $data['title']=$request->title;
         $slug=Str::slug($request->title);
         $count=Post::where('slug',$slug)->count();
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
         $data['slug']=$slug;
+        $data['summary']=$request->summary;
+        $data['description']=$request->description;
+        $data['quote']=$request->quote;
+        $data['post_cat_id']=$request->post_cat_id;
+      
 
         $tags=$request->input('tags');
         if($tags){

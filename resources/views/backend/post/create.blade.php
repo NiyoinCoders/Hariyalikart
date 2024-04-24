@@ -9,7 +9,7 @@
 <div class="card">
     <h5 class="card-header">Add Post</h5>
     <div class="card-body">
-      <form method="post" action="{{route('post.store')}}">
+      <form method="post" action="{{route('post.store')}}" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="form-group">
           <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
@@ -55,7 +55,7 @@
 
         <div class="form-group">
           <label for="tags">Tag</label>
-          <select name="tags[]" multiple  data-live-search="true" class="form-control selectpicker">
+          <select name="tags[]" multiple  data-live-search="true" class="form-control ">
               <option value="">--Select any tag--</option>
               @foreach($tags as $key=>$data)
                   <option value='{{$data->title}}'>{{$data->title}}</option>
