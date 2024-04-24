@@ -5,14 +5,11 @@
 @section('main-content')
 
 <div class="stricky-header stricked-menu main-menu">
-            <div class="sticky-header__content"></div>
-            </div>
+    <div class="sticky-header__content"></div>
+</div>
 
 <section class="page-header">
-    <!-- style="background-image: url(assets/images/backgrounds/page-header-bg-1-1.jpg); -->
-    <!-- style="background-image: url(assets/images/hariyali/aboutmain.png); -->
-    <div class="page-header__bg"
-    style="background-image: url(assets/images/hariyali/aboutmain.jpg);
+    <div class="page-header__bg" style="background-image: url(assets/images/hariyali/aboutmain.jpg);
 
         ">
     </div>

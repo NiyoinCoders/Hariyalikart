@@ -1,41 +1,39 @@
 <!-- Meta Tag -->
 @yield('meta')
 <!-- Title Tag  -->
-<title>@yield('title')</title>
+<!-- <title>@yield('title')</title> -->
 <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haryalikart | Organic Stores</title>
-    <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicons/apple-touch-icon.png') }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicons/favicon-32x32.png') }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicons/favicon-16x16.png') }}" />
-    <link rel="manifest" href="{{ asset('assets/images/favicons/site.webmanifest') }}" />
-    <meta name="description" content="Agrikon HTML Template For Agriculture Farm & Farmers" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Haryalikart | Organic Stores</title>
+<!-- favicons Icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicons/apple-touch-icon.png') }}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicons/favicon-32x32.png') }}" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicons/favicon-16x16.png') }}" />
+<link rel="manifest" href="{{ asset('assets/images/favicons/site.webmanifest') }}" />
+<meta name="description" content="Agrikon HTML Template For Agriculture Farm & Farmers" />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Abril+Fatface&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-        <link rel="stylesheet" href="{{asset('frontend/css/themify-icons.css')}}">
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Abril+Fatface&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{{asset('frontend/css/themify-icons.css')}}">
 
 
 
-    <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-select/bootstrap-select.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/animate/animate.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/jarallax/jarallax.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/organik-icon/organik-icons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.pips.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/odometer/odometer.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/swiper/swiper.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/vendors/tiny-slider/tiny-slider.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-select/bootstrap-select.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/animate/animate.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/jarallax/jarallax.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/organik-icon/organik-icons.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.pips.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/odometer/odometer.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/swiper/swiper.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('assets/vendors/tiny-slider/tiny-slider.min.css') }}" />
 
-    <!-- template styles -->
-    <link rel="stylesheet" href="{{ asset('assets/css/organik.css') }}" />
+<!-- template styles -->
+<link rel="stylesheet" href="{{ asset('assets/css/organik.css') }}" />
 
 <!-- StyleSheet -->
 <link rel="manifest" href="/manifest.json">
@@ -76,8 +74,13 @@
 @stack('styles')
 
 <style>
-     a:link {
-  text-decoration: none;
-}
+    a:link {
+        text-decoration: none;
+    }
 
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 </style>
