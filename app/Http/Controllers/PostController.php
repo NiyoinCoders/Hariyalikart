@@ -69,7 +69,7 @@ exit();
 
     } */
 
-    
+    $data=$request->all();
         $photo = $request->file('photo');
         $image_name = date('YmdHis') . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
         $photo->move(public_path('blog'), $image_name);
@@ -154,7 +154,7 @@ exit();
             'quote'=>'string|nullable',
             'summary'=>'string|required',
             'description'=>'string|nullable',
-            'photo'=>'string|nullable',
+            'photo'=>'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'tags'=>'nullable',
             'added_by'=>'nullable',
             'post_cat_id'=>'nullable',
@@ -162,18 +162,21 @@ exit();
         ]);
 
         $data=$request->all();
-        if($request->hasFile('photo')){
-            $image = $request->file('photo');
-            $image_name = $image->getClientOriginalName();
-            $image->move(public_path('/blog'),$image_name);
-
-           $image_path = "/blog/" . $image_name;
-
-
-    }
-    if($data['photo']){
-        $data['photo'] = "/blog/" . $image_name;
-    }
+        $photo = $request->file('photo');
+        $image_name = date('YmdHis') . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
+        $photo->move(public_path('blog'), $image_name);
+        $data['photo'] =  $url = URL::to("/blog/$image_name");
+        $data['title']=$request->title;
+        $slug=Str::slug($request->title);
+        $count=Post::where('slug',$slug)->count();
+        if($count>0){
+            $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
+        }
+        $data['slug']=$slug;
+        $data['summary']=$request->summary;
+        $data['description']=$request->description;
+        $data['quote']=$request->quote;
+        $data['post_cat_id']=$request->post_cat_id;
         $tags=$request->input('tags');
         // return $tags;
         if($tags){
