@@ -65,7 +65,7 @@
                             <a href="{{route('gallery')}}">Gallery</a>
                         </li>
                         <li>
-                            <a href="{{route('blog')}}">Blog</a>
+                            <a href="{{route('blogs')}}">Blog</a>
                         </li>
                         <li>
                             <a href="{{route('faq')}}">FAQs</a>
