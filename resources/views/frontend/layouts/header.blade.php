@@ -112,7 +112,7 @@
                     <a href="{{route('product-lists')}}">Shop</a>
 
                 </li>
-                <li @if(Request::is('blog')) class="current" @endif><a href="{{route('blog')}}">Blog</a>
+                <li @if(Request::is('blogs')) class="current" @endif><a href="{{route('blogs')}}">Blog</a>
 
                 </li>
                 <li @if(Request::is('contact')) class="current" @endif><a href="{{route('contact')}}">Contact</a></li>

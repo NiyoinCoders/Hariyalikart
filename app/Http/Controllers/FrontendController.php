@@ -252,6 +252,8 @@ class FrontendController extends Controller
     }
 
     public function blog(){
+       /*  echo "sdhfd";
+        exit(); */
         $post=Post::query();
 
         if(!empty($_GET['category'])){
