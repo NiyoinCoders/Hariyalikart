@@ -1,13 +1,13 @@
 @extends('frontend.layouts.master')
 @section('title','Ecommerce Laravel || HOME PAGE')
 @push('style')
-<style>
-    @media (min-width: 1200px) {
-        .main-menu__list {
-            margin-left: 100px;
-        }
+    <style>
+        @media (min-width: 1200px) {
+    .main-menu__list{
+        margin-left: 100px;
     }
-</style>
+}
+    </style>
 @endpush
 @section('main-content')
 
@@ -24,18 +24,19 @@
 "prevEl": "#main-slider__swiper-button-prev"
 }
 }'>
-        <!--      style="background-image: url(assets/images/main-slider/main-slider-1-1.jpg); -->
-        <!-- style="background-image: url(assets/images/hariyali/paypamain2.jpg); -->
-        <!--   style="background-image: url(assets/images/hariyali/papaya2.png); -->
+<!--      style="background-image: url(assets/images/main-slider/main-slider-1-1.jpg); -->
+<!-- style="background-image: url(assets/images/hariyali/paypamain2.jpg); -->
+<!--   style="background-image: url(assets/images/hariyali/papaya2.png); -->
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="image-layer" style="background-image: url(assets/images/hariyali/home1.jpg);  ">
+                <div class="image-layer"
+                style="background-image: url(assets/images/hariyali/home1.jpg);  ">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 text-center">
-                            <h2><span> Welcome to</span> <br>
+                            <h2><span>  Welcome to</span> <br>
                                 Hariyalikart</h2>
                             <a href="products.html" class=" thm-btn">Order Now</a>
 
@@ -44,16 +45,17 @@
                 </div>
                 <!-- /.container -->
             </div><!-- /.swiper-slide -->
-            <!-- style="background-image: url(assets/images/main-slider/main-slider-1-2.jpg);" -->
+             <!-- style="background-image: url(assets/images/main-slider/main-slider-1-2.jpg);" -->
             <div class="swiper-slide">
-                <div class="image-layer" style="background-image: url(assets/images/hariyali/front2.jpg);">
+                <div class="image-layer"
+                    style="background-image: url(assets/images/hariyali/front2.jpg);">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 text-center">
                             <h2><span>Latest Agricultural</span> <br>
-                                Techniques</h2>
+                              Techniques</h2>
                             <a href="contact.html" class=" thm-btn">Order Now</a>
                             <!-- /.thm-btn dynamic-radius -->
                         </div><!-- /.col-lg-7 text-right -->
@@ -64,9 +66,11 @@
 
         <!-- If we need navigation buttons -->
         <div class="main-slider__nav">
-            <div class="swiper-button-prev" id="main-slider__swiper-button-next"><i class="organik-icon-left-arrow"></i>
+            <div class="swiper-button-prev" id="main-slider__swiper-button-next"><i
+                    class="organik-icon-left-arrow"></i>
             </div>
-            <div class="swiper-button-next" id="main-slider__swiper-button-prev"><i class="organik-icon-right-arrow"></i></div>
+            <div class="swiper-button-next" id="main-slider__swiper-button-prev"><i
+                    class="organik-icon-right-arrow"></i></div>
         </div><!-- /.main-slider__nav -->
 
     </div><!-- /.swiper-container thm-swiper__slider -->
@@ -75,7 +79,7 @@
 <section class="feature-box">
     <div class="container">
         <div class="inner-container wow fadeInUp" data-wow-duration="1500ms">
-            <div class="thm-tiny__slider" id="contact-infos-box">
+            <div class="thm-tiny__slider" id="contact-infos-box" >
                 <div>
                     <div class="feature-box__single">
                         <i class="organik-icon-global-shipping feature-box__icon"></i>
@@ -134,10 +138,10 @@
         </div><!-- /.new-products__top -->
 
 
-        <section class="products-page" style="margin-top: -45px; padding-top: 0px; padding-bottom:0px;">
-            <div class="container">
-                <div class="row">
-                    {{-- <div class="col-sm-12 col-md-12 col-lg-3">
+<section class="products-page" style="margin-top: -45px; padding-top: 0px; padding-bottom:0px;">
+    <div class="container">
+        <div class="row">
+            {{-- <div class="col-sm-12 col-md-12 col-lg-3">
                 <div class="product-sidebar">
                     <div class="product-sidebar__single product-sidebar__search-widget">
                         <form action="#">
@@ -173,8 +177,8 @@
                     </div><!-- /.product-sidebar__single -->
                 </div><!-- /.product-sidebar -->
             </div><!-- /.col-sm-12 col-md-12 col-lg-3 --> --}}
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        {{-- <div class="product-sorter">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                {{-- <div class="product-sorter">
                     <p>Showing 1–9 of 12 results</p>
                     <div class="product-sorter__select">
                         <select class="selectpicker">
@@ -185,15 +189,15 @@
                         </select>
                     </div><!-- /.product-sorter__select -->
                 </div><!-- /.product-sorter --> --}}
-                        <div class="row">
-                            @foreach($recent_products as $product)
-                            @php
-                            $photo=explode(',',$product->photo);
-                            @endphp
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <img src='{{ asset("$photo[0]")}}'' alt="{{$photo[0]}}" height="367px" style="height:305px;">
+                <div class="row">
+                    @foreach($recent_products as $product)
+                    @php
+                        $photo=explode(',',$product->photo);
+                    @endphp
+                    <div class="col-md-6 col-lg-4">
+                        <div class="product-card">
+                            <div class="product-card__image">
+                                <img src='{{ asset("$photo[0]")}}'' alt="{{$photo[0]}}" height="367px" style="height:305px;">
                                 <div class="product-card__image-content">
                                     <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i></a>
                                     <a href="{{route('add-to-wishlist',$product->slug)}}"><i class="organik-icon-heart"></i></a>
@@ -245,86 +249,87 @@
                                             <div class="product-gallery">
                                                 <div class="quickview-slider-active">
                                                     @php
-                                                        $photo=explode(' ,',$product->photo);
-                                        // dd($photo);
-                                        @endphp
-                                        @foreach($photo as $data)
-                                        <div class="single-slider">
-                                            <img src='{{asset("$data")}}' alt="{{$data}}" height="482px">
-                                        </div>
-                                        @endforeach
+                                                        $photo=explode(',',$product->photo);
+                                                    // dd($photo);
+                                                    @endphp
+                                                    @foreach($photo as $data)
+                                                        <div class="single-slider">
+                                                            <img src='{{asset("$data")}}' alt="{{$data}}" height="482px">
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        <!-- End Product slider -->
                                     </div>
-                                </div>
-                                <!-- End Product slider -->
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <div class="quickview-content">
-                                    <h2>{{$product->title}}</h2>
-                                    <div class="quickview-ratting-review">
-                                        <div class="quickview-ratting-wrap">
-                                            <div class="quickview-ratting">
-                                                {{-- <i class="yellow fa fa-star"></i>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="quickview-content">
+                                            <h2>{{$product->title}}</h2>
+                                            <div class="quickview-ratting-review">
+                                                <div class="quickview-ratting-wrap">
+                                                    <div class="quickview-ratting">
+                                                        {{-- <i class="yellow fa fa-star"></i>
                                                         <i class="yellow fa fa-star"></i>
                                                         <i class="yellow fa fa-star"></i>
                                                         <i class="yellow fa fa-star"></i>
                                                         <i class="fa fa-star"></i> --}}
-                                                @php
-                                                $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');
-                                                $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();
-                                                @endphp
-                                                @for($i=1; $i<=5; $i++) @if($rate>=$i)
-                                                    <i class="yellow fa fa-star"></i>
+                                                        @php
+                                                            $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');
+                                                            $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();
+                                                        @endphp
+                                                        @for($i=1; $i<=5; $i++)
+                                                            @if($rate>=$i)
+                                                                <i class="yellow fa fa-star"></i>
+                                                            @else
+                                                            <i class="fa fa-star"></i>
+                                                            @endif
+                                                        @endfor
+                                                    </div>
+                                                    <a href="#"> ({{$rate_count}} customer review)</a>
+                                                </div>
+                                                <div class="quickview-stock">
+                                                    @if($product->stock >0)
+                                                    <span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
                                                     @else
-                                                    <i class="fa fa-star"></i>
+                                                    <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
                                                     @endif
-                                                    @endfor
+                                                </div>
                                             </div>
-                                            <a href="#"> ({{$rate_count}} customer review)</a>
-                                        </div>
-                                        <div class="quickview-stock">
-                                            @if($product->stock >0)
-                                            <span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
-                                            @else
-                                            <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    @php
-                                    $after_discount=($product->price-($product->price*$product->discount)/100);
-                                    @endphp
-                                    <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small> ${{number_format($after_discount,2)}} </h3>
-                                    <div class="quickview-peragraph">
-                                        <p>{!! html_entity_decode($product->summary) !!}</p>
-                                    </div>
-                                    @if($product->size)
-                                    <div class="size">
-                                        <h4>Size</h4>
-                                        <ul>
                                             @php
-                                            $sizes=explode(',',$product->size);
-                                            // dd($sizes);
+                                                $after_discount=($product->price-($product->price*$product->discount)/100);
                                             @endphp
-                                            @foreach($sizes as $size)
-                                            <li><a href="#" class="one">{{$size}}</a></li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                    @endif
-                                    <div class="size">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-12">
-                                                <h5 class="title">Size</h5>
-                                                <select>
-                                                    @php
-                                                    $sizes=explode(',',$product->size);
-                                                    // dd($sizes);
-                                                    @endphp
-                                                    @foreach($sizes as $size)
-                                                    <option>{{$size}}</option>
-                                                    @endforeach
-                                                </select>
+                                            <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+                                            <div class="quickview-peragraph">
+                                                <p>{!! html_entity_decode($product->summary) !!}</p>
                                             </div>
-                                            {{-- <div class="col-lg-6 col-12">
+                                            @if($product->size)
+                                                <div class="size">
+                                                    <h4>Size</h4>
+                                                    <ul>
+                                                        @php
+                                                            $sizes=explode(',',$product->size);
+                                                            // dd($sizes);
+                                                        @endphp
+                                                        @foreach($sizes as $size)
+                                                        <li><a href="#" class="one">{{$size}}</a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+                                            <div class="size">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-12">
+                                                        <h5 class="title">Size</h5>
+                                                        <select>
+                                                            @php
+                                                            $sizes=explode(',',$product->size);
+                                                            // dd($sizes);
+                                                            @endphp
+                                                            @foreach($sizes as $size)
+                                                                <option>{{$size}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    {{-- <div class="col-lg-6 col-12">
                                                         <h5 class="title">Color</h5>
                                                         <select>
                                                             <option selected="selected">orange</option>
@@ -333,45 +338,44 @@
                                                             <option>pink</option>
                                                         </select>
                                                     </div> --}}
-                                        </div>
-                                    </div>
-                                    <form action="{{route('single-add-to-cart')}}" method="POST">
-                                        @csrf
-                                        <div class="quantity">
-                                            <!-- Input Order -->
-                                            <div class="input-group">
-                                                <div class="button minus">
-                                                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                        <i class="ti-minus"></i>
-                                                    </button>
-                                                </div>
-                                                <input type="hidden" name="slug" value="{{$product->slug}}">
-                                                <input type="text" name="quant[1]" class="input-number" data-min="1" data-max="1000" value="1">
-                                                <div class="button plus">
-                                                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-                                                        <i class="ti-plus"></i>
-                                                    </button>
                                                 </div>
                                             </div>
-                                            <!--/ End Input Order -->
+                                            <form action="{{route('single-add-to-cart')}}" method="POST">
+                                                @csrf
+                                                <div class="quantity">
+                                                    <!-- Input Order -->
+                                                    <div class="input-group">
+                                                        <div class="button minus">
+                                                            <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                                <i class="ti-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="hidden" name="slug" value="{{$product->slug}}">
+                                                        <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
+                                                        <div class="button plus">
+                                                            <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
+                                                                <i class="ti-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!--/ End Input Order -->
+                                                </div>
+                                                <div class="add-to-cart">
+                                                    <button type="submit" class="btn">Add to cart</button>
+                                                    <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
+                                                </div>
+                                            </form>
+                                            <div class="default-social">
+                                            <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+                                            </div>
                                         </div>
-                                        <div class="add-to-cart">
-                                            <button type="submit" class="btn">Add to cart</button>
-                                            <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
-                                        </div>
-                                    </form>
-                                    <div class="default-social">
-                                        <!-- ShareThis BEGIN -->
-                                        <div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
-    </div>
-    @endforeach
+        @endforeach
     @endif
     <!-- Modal end --><!-- /.row -->
     </div><!-- /.container -->
@@ -407,17 +411,17 @@
                         <h3>Overview</h3>
                     </div>
                     <!-- <div class=""> -->
-                    <div class="col-md-12">
-                        <h4>Hariyalikart is a trailblazer in the agricultural industry, leveraging cutting-edge innovation and
-                            transformative technologies to revolutionize traditional farming practices. Established in [2022],
-                            our headquarters in [Patna] serves as the epicenter of our dedicated team, comprising passionate
-                            agricultural experts, seasoned engineers, and forward-thinking visionaries. We are committed to
-                            driving sustainable agricultural development through the strategic integration of smart gadgets,
-                            data analytics, and advanced technologies.
-                        </h4>
-                        <!-- <p>Voluptate velit essects quis tempor orci. Suspendisse that potenti faucibus.</p> -->
-                    </div>
-                    <!-- <div class="col-md-6">
+                        <div class="col-md-12">
+                            <h4>Hariyalikart is a trailblazer in the agricultural industry, leveraging cutting-edge innovation and
+                                transformative technologies to revolutionize traditional farming practices. Established in [2022],
+                                our headquarters in [Patna] serves as the epicenter of our dedicated team, comprising passionate
+                                agricultural experts, seasoned engineers, and forward-thinking visionaries. We are committed to
+                                driving sustainable agricultural development through the strategic integration of smart gadgets,
+                                data analytics, and advanced technologies.
+                                </h4>
+                            <!-- <p>Voluptate velit essects quis tempor orci. Suspendisse that potenti faucibus.</p> -->
+                        </div>
+                        <!-- <div class="col-md-6">
                             <ul class="list-unstyled">
                                 <li>
                                     <i class="far fa-check-circle"></i>
@@ -453,7 +457,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
+                <div class="offer-banner__box"
+                    style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
                     <div class="offer-banner__content">
                         <!-- <h3><span>100%</span> <br>
 
@@ -471,18 +476,19 @@
                 </div><!-- /.offer-banner__box -->
             </div><!-- /.col-md-6 -->
             <div class="col-md-6 wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="100ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
+                <div class="offer-banner__box"
+                    style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
                     <div class="offer-banner__content">
                         <!-- <h3><span>100%</span> <br>Organic</h3>
                         <p>Quality Organic Food Store</p> -->
-                        <h3>Company Values: </h3>
+                        <h3>Company Values:                           </h3>
                         <p><br> Our core values at Hariyalikart form the cornerstone of our operations, encompassing
                             sustainability, innovation, and a farmer-centric approach. We are committed to fostering
                             sustainable agricultural practices that prioritize environmental stewardship, technological
                             innovation, and equitable benefits for farmers, ensuring a harmonious balance between
                             productivity and conservation.
 
-                        </p>
+                            </p>
                         <!-- <a href="products.html" class="thm-btn">Order Now</a> -->
                     </div><!-- /.offer-banner__content -->
                 </div><!-- /.offer-banner__box -->
@@ -491,7 +497,8 @@
         <!-- 2ND STARTS -->
         <div class="row">
             <div class="col-md-6 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
+                <div class="offer-banner__box"
+                    style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
                     <div class="offer-banner__content">
                         <!-- <h3><span>100%</span> <br>
 
@@ -504,17 +511,18 @@
                             irrigation systems, precision agriculture tools, and data analytics platforms. Through AI, IoT, and
                             machine learning algorithms, we deliver personalized and data-driven insights to farmers,
                             enabling them to make informed decisions and maximize productivity while minimizing resource
-                            <br> wastage.
-                        </p>
-                        <p></p>
-                        <p></p>
+                          <br>  wastage.
+                             </p>
+                            <p></p>
+                            <p></p>
 
                         <!-- <a href="contact.html" class="thm-btn">Order Now</a> -->
                     </div><!-- /.offer-banner__content -->
                 </div><!-- /.offer-banner__box -->
             </div><!-- /.col-md-6 -->
             <div class="col-md-6 wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="100ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
+                <div class="offer-banner__box"
+                    style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
                     <div class="offer-banner__content">
                         <!-- <h3><span>100%</span> <br>Organic</h3>
                         <p>Quality Organic Food Store</p> -->
@@ -526,7 +534,7 @@
                             relentless pursuit of excellence and our unwavering commitment to driving positive change in
                             agriculture.
 
-                        </p>
+                            </p>
                         <!-- <a href="products.html" class="thm-btn">Order Now</a> -->
                     </div><!-- /.offer-banner__content -->
                 </div><!-- /.offer-banner__box -->
@@ -536,7 +544,8 @@
         <!-- 3rd start -->
         <div class="row">
             <div class="col-md-6 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
+                <div class="offer-banner__box"
+                    style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
                     <div class="offer-banner__content">
                         <!-- <h3><span>100%</span> <br>
 
@@ -549,14 +558,15 @@
                             knowledge exchange, technological innovation, and continuous improvement, enabling us to
                             deliver practical, scalable, and impactful solutions that drive tangible outcomes for farmers.
 
-                        </p>
+                            </p>
 
                         <!-- <a href="contact.html" class="thm-btn">Order Now</a> -->
                     </div><!-- /.offer-banner__content -->
                 </div><!-- /.offer-banner__box -->
             </div><!-- /.col-md-6 -->
             <div class="col-md-6 wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="100ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
+                <div class="offer-banner__box"
+                    style="background-image: url(assets/images/resources/offer-banner-1-2.jpg);">
                     <div class="offer-banner__content">
                         <!-- <h3><span>100%</span> <br>Organic</h3>
                         <p>Quality Organic Food Store</p> -->
@@ -566,38 +576,39 @@
                             experienced a remarkable 60% increase in crop yield after implementing our AI-driven smart
                             irrigation system. These success stories serve as powerful testimonials to the effectiveness of our
                             solutions in improving farm productivity, profitability, and <br> sustainability.
-                        </p>
+                            </p>
                         <!-- <a href="products.html" class="thm-btn">Order Now</a> -->
                     </div><!-- /.offer-banner__content -->
                 </div><!-- /.offer-banner__box -->
             </div><!-- /.col-md-6 -->
         </div><!-- /.row -->
-        <!-- 3rd end -->
-        <!-- 4th starts -->
+<!-- 3rd end -->
+<!-- 4th starts -->
 
-        <div class="row">
-            <div class="col-md-12 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                <div class="offer-banner__box" style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
-                    <div class="offer-banner__content">
-                        <!-- <h3><span>100%</span> <br>
+<div class="row">
+<div class="col-md-12 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+<div class="offer-banner__box"
+    style="background-image: url(assets/images/resources/offer-banner-1-1.jpg);">
+    <div class="offer-banner__content">
+        <!-- <h3><span>100%</span> <br>
 
             welcome to
         </h3> -->
-                        <h3>Future Goals: </h3>
-                        <p><br>Looking ahead, Hariyalikart is poised for transformative growth and expansion. Our future
-                            roadmap includes a strategic focus on diversifying our product portfolio to encompass a broader
-                            range of crops, ecosystems, and geographical regions. We are committed to leveraging strategic
-                            alliances with government agencies, industry partners, and research institutions to reach
-                            underserved farming communities, drive inclusive growth, and catalyze a paradigm shift in global
-                            agriculture towards sustainability and resilience. </p>
+        <h3>Future Goals: </h3>
+        <p><br>Looking ahead, Hariyalikart is poised for transformative growth and expansion. Our future
+            roadmap includes a strategic focus on diversifying our product portfolio to encompass a broader
+            range of crops, ecosystems, and geographical regions. We are committed to leveraging strategic
+            alliances with government agencies, industry partners, and research institutions to reach
+            underserved farming communities, drive inclusive growth, and catalyze a paradigm shift in global
+            agriculture towards sustainability and resilience.    </p>
 
-                        <!-- <a href="contact.html" class="thm-btn">Order Now</a> -->
-                    </div><!-- /.offer-banner__content -->
-                </div><!-- /.offer-banner__box -->
-            </div><!-- /.col-md-6 -->
+        <!-- <a href="contact.html" class="thm-btn">Order Now</a> -->
+    </div><!-- /.offer-banner__content -->
+</div><!-- /.offer-banner__box -->
+</div><!-- /.col-md-6 -->
 
-        </div><!-- /.row -->
-        <!-- 4th ends -->
+</div><!-- /.row -->
+<!-- 4th ends -->
     </div><!-- /.container -->
 </section><!-- /.offer-banner -->
 
@@ -635,7 +646,8 @@
 
 <section class="call-to-action">
     <img src="assets/images/shapes/call-shape-1.png" alt="" class="call-to-action__shape-1">
-    <img src="assets/images/shapes/call-shape-2.png" alt="" class="call-to-action__shape-2 wow fadeInLeft" data-wow-duration="1500ms">
+    <img src="assets/images/shapes/call-shape-2.png" alt="" class="call-to-action__shape-2 wow fadeInLeft"
+        data-wow-duration="1500ms">
     <h2 class="floated-text">Oragnic</h2><!-- /.floated-text -->
     <div class="container">
         <div class="row">
@@ -646,7 +658,8 @@
             <div class="col-md-12 col-lg-12 col-xl-6 clearfix">
                 <div class="call-to-action__content">
                     <div class="block-title text-left">
-                        <div class="block-title__decor" style="background-image: url(assets/images/shapes/leaf-2-1.png);"></div>
+                        <div class="block-title__decor"
+                            style="background-image: url(assets/images/shapes/leaf-2-1.png);"></div>
                         <!-- /.block-title__decor -->
                         <!-- <p>Shopping Store</p> -->
                         <!-- <h3>Organic Food Only</h3> -->
@@ -655,11 +668,11 @@
                     <!-- <p>There are many variations of passages of lorem ipsum available but the majority have
                         suffered
                         alteration in some form by injected humor or random word.</p> -->
-                    <p class="pb-1">- Am I living a healthy & sustainable life?</p>
-                    <p class="pb-1">- How can I get rid of stress from my lifestyle?</p>
-                    <p class="pb-3">- How can I prioritize physical & mental health?</p>
-                    <p class="pb-1" style="font-size: 15px;">Ask overworked and underslept prateek while having pizza at 11pm in a corporate office.</p>
-                    <p class="pb-1" style="font-size: 15px;">Click below to know how an accomplished CA turned his life around to start a health & wellness startup.</p>
+                        <p class="pb-1">- Am I living a healthy & sustainable life?</p>
+                        <p class="pb-1">- How can I get rid of stress from my lifestyle?</p>
+                        <p class="pb-3">- How can I prioritize physical & mental health?</p>
+                        <p class="pb-1" style="font-size: 15px;">Ask overworked and underslept prateek while having pizza at 11pm in a corporate office.</p>
+                        <p class="pb-1" style="font-size: 15px;">Click below to know how an accomplished CA turned his life around to start a health & wellness startup.</p>
                     <!--<div class="call-to-action__wrap">-->
                     <!--    <div class="row no-gutters">-->
                     <!--        <div class="col-md-6">-->
@@ -860,11 +873,7 @@
         </div><!-- /.container -->
     </div><!-- /.testimonials-one__head -->
     <div class="container">
-        <div class="tns-outer" id="testimonials-one-box-ow">
-            <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">5 to 7</span> of 3</div>
-            <div id="testimonials-one-box-mw" class="tns-ovh">
-                <div class="tns-inner" id="testimonials-one-box-iw">
-                    <div class="thm-tiny__slider  " id="testimonials-one-box" data-tiny-options="{
+        <div class="tns-outer" id="testimonials-one-box-ow"><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">5 to 7</span>  of 3</div><div id="testimonials-one-box-mw" class="tns-ovh"><div class="tns-inner" id="testimonials-one-box-iw"><div class="thm-tiny__slider  " id="testimonials-one-box" data-tiny-options="{
     &quot;container&quot;: &quot;#testimonials-one-box&quot;,
     &quot;items&quot;: 1,
     &quot;slideBy&quot;: &quot;page&quot;,
@@ -888,159 +897,147 @@
           &quot;disable&quot;: true
         }
       }
-}" style="">
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
-                                    <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
-                                    <h3>Ethan Thomas</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>
-                                        "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
-                                    <h3>Winnie Collier</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-2.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo1.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart transformed my farming! Quality seeds, efficient tools, and expert advice made my harvest bountiful. A must for every farmer!"</p>
-                                    <h3>Helen Woods</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
-                                    <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
-                                    <h3>Ethan Thomas</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-active" id="testimonials-one-box-item0">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>
-                                        "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
-                                    <h3>Winnie Collier</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-active" id="testimonials-one-box-item1">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-2.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo1.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart transformed my farming! Quality seeds, efficient tools, and expert advice made my harvest bountiful. A must for every farmer!"</p>
-                                    <h3>Helen Woods</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-active" id="testimonials-one-box-item2">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
-                                    <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
-                                    <h3>Ethan Thomas</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>
-                                        "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
-                                    <h3>Winnie Collier</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-2.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo1.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart transformed my farming! Quality seeds, efficient tools, and expert advice made my harvest bountiful. A must for every farmer!"</p>
-                                    <h3>Helen Woods</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
-                                    <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
-                                    <h3>Ethan Thomas</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__image">
-                                    <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
-                                    <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
-                                </div><!-- /.testimonials-one__image -->
-                                <div class="testimonials-one__content">
-                                    <p>
-                                        "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
-                                    <h3>Winnie Collier</h3>
-                                    <span>Customer</span>
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div>
-                    </div>
-                </div>
+}" style=""><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
+                        <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
+                        <h3>Ethan Thomas</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>
+                            "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
+                        <h3>Winnie Collier</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-2.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo1.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart transformed my farming! Quality seeds, efficient tools, and expert advice made my harvest bountiful. A must for every farmer!"</p>
+                        <h3>Helen Woods</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
+                        <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
+                        <h3>Ethan Thomas</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
             </div>
-            <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0" style="display: none;"><button type="button" data-controls="prev" tabindex="-1" aria-controls="testimonials-one-box"><i class="fa fa-angle-left"></i></button><button type="button" data-controls="next" tabindex="-1" aria-controls="testimonials-one-box"><i class="fa fa-angle-right"></i></button></div>
-        </div>
+            <div class="tns-item tns-slide-active" id="testimonials-one-box-item0">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>
+                            "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
+                        <h3>Winnie Collier</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div>
+            <div class="tns-item tns-slide-active" id="testimonials-one-box-item1">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-2.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo1.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart transformed my farming! Quality seeds, efficient tools, and expert advice made my harvest bountiful. A must for every farmer!"</p>
+                        <h3>Helen Woods</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div>
+            <div class="tns-item tns-slide-active" id="testimonials-one-box-item2">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
+                        <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
+                        <h3>Ethan Thomas</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div>
+        <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>
+                            "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
+                        <h3>Winnie Collier</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-2.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo1.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart transformed my farming! Quality seeds, efficient tools, and expert advice made my harvest bountiful. A must for every farmer!"</p>
+                        <h3>Helen Woods</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-3.png" alt=""> -->
+                        <img src="assets/images/hariyali/teso3.jpg" width="180px" height="120px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>"Hariyalikart is a lifeline for farmers like me. Their reliable products and expert advice have revolutionized my farming journey. Truly indispensable!"</p>
+                        <h3>Ethan Thomas</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1" style="display: none;">
+                <div class="testimonials-one__single">
+                    <div class="testimonials-one__image">
+                        <!-- <img src="assets/images/resources/testi-1-1.png" alt=""> -->
+                        <img src="assets/images/hariyali/testo2.jpg" width="180px" alt="">
+                    </div><!-- /.testimonials-one__image -->
+                    <div class="testimonials-one__content">
+                        <p>
+                            "Hariyalikart's top-notch products revolutionized my farm. From seeds to tools, their quality and service exceed expectations. Highly recommend for all farmers!"</p>
+                        <h3>Winnie Collier</h3>
+                        <span>Customer</span>
+                    </div><!-- /.testimonials-one__content -->
+                </div><!-- /.testimonials-one__single -->
+            </div></div></div></div><div class="tns-controls" aria-label="Carousel Navigation" tabindex="0" style="display: none;"><button type="button" data-controls="prev" tabindex="-1" aria-controls="testimonials-one-box"><i class="fa fa-angle-left"></i></button><button type="button" data-controls="next" tabindex="-1" aria-controls="testimonials-one-box"><i class="fa fa-angle-right"></i></button></div></div>
     </div>
 </section><!-- /.testimonials-one -->
 
@@ -1085,77 +1082,88 @@
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-1.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-01.png" alt="">
-                        <a href="assets/images/hariyali/g-01.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-01.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-2.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-02.png" alt="">
-                        <a href="assets/images/hariyali/g-02.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-02.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-3.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-03.png" alt="">
-                        <a href="assets/images/hariyali/g-03.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-03.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-4.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-04.png" alt="">
-                        <a href="assets/images/hariyali/g-04.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-04.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-5.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-05.png" alt="">
-                        <a href="assets/images/hariyali/g-05.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-05.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-1.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-06.png" alt="">
-                        <a href="assets/images/hariyali/g-06.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-06.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-2.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-07.png" alt="">
-                        <a href="assets/images/hariyali/g-07.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-07.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-3.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-08.png" alt="">
-                        <a href="assets/images/hariyali/g-08.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-08.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-4.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-09.png" alt="">
-                        <a href="assets/images/hariyali/g-09.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-09.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-5.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-10.png" alt="">
-                        <a href="assets/images/hariyali/g-10.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-10.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-1.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-11.png" alt="">
-                        <a href="assets/images/hariyali/g-11.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-11.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
@@ -1163,87 +1171,101 @@
                         <!-- <img src="assets/images/hariyali/Haryalikart-14.png" alt=""> -->
                         <!-- <img src="assets/images/gallery/gallery-1-1.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-12.png" alt="">
-                        <a href="assets/images/hariyali/g-12.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-12.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-3.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-13.png" alt="">
-                        <a href="assets/images/hariyali/g-13.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-13.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <!-- <img src="assets/images/gallery/gallery-1-4.jpg" alt=""> -->
                         <img src="assets/images/hariyali/g-10.png" alt="">
-                        <a href="assets/images/hariyali/g-10.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-10.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-02.png" alt="">
-                        <a href="assets/images/hariyali/g-02.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-02.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-02.png" alt="">
-                        <a href="assets/images/hariyali/g-02.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-02.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-03.png" alt="">
-                        <a href="assets/images/hariyali/g-03.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-03.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-04.png" alt="">
-                        <a href="assets/images/hariyali/g-04.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-04.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-05.png" alt="">
-                        <a href="assets/images/hariyali/g-05.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-05.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-06.png" alt="">
-                        <a href="assets/images/hariyali/g-06.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-06.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-07.png" alt="">
-                        <a href="assets/images/hariyali/g-07.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-07.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-08.png" alt="">
-                        <a href="assets/images/hariyali/g-08.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-08.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-09.png" alt="">
-                        <a href="assets/images/hariyali/g-09.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-09.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-10.png" alt="">
-                        <a href="assets/images/hariyali/g-10.png" class="img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-10.png" class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
                 <div class="swiper-slide">
                     <div class="gallery-one__item">
                         <img src="assets/images/hariyali/g-11.png" alt="">
-                        <a href="assets/images/hariyali/g-11.png class=" img-popup"><i class="fa fa-plus"></i></a>
+                        <a href="assets/images/hariyali/g-11.png class="img-popup"><i
+                                class="fa fa-plus"></i></a>
                     </div><!-- /.gallery-one__item -->
                 </div><!-- /.swiper-slide -->
             </div><!-- /.swiper-wrapper -->
@@ -1252,3 +1274,4 @@
 </section><!-- /.gallery-one -->
 
 @endsection
+

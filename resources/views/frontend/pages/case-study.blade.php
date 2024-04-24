@@ -6,7 +6,7 @@
     <div class="sticky-header__content"></div>
 </div>
 <section class="page-header">
-    <div class="page-header__bg" style="background-image: url(assets/images/hariyali/c.jpg);">
+    <div class="page-header__bg" style="background-image: url(assets/images/hariyali/case-study-banner.png);">
     </div>
     <!-- /.page-header__bg -->
     <div class="container">
