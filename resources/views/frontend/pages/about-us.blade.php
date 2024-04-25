@@ -91,7 +91,7 @@
                     <div class="team-card__content">
                         <h3>Anjali Kumari
                         </h3>
-                        <h6>Role: Co-founder & CTO</h6>
+                        <h6>Role: Co-Founder & COO</h6>
                         <div class="team-card__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="team-card__content">
                         <h3>Manish Kumar</h3>
-                        <h6>Role: Co-founder & CMO</h6>
+                        <h6>Role: Co-Founder & CMO</h6>
                         <div class="team-card__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -123,7 +123,25 @@
                     </div>
                     <div class="team-card__content">
                         <h3>Ajay Kumar</h3>
-                        <h6>Role: Content Creator</h6>
+                        <h6>Role: Content Creator & CIO</h6>
+                        <div class="team-card__social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="team-card">
+                    <div class="team-card__image">
+                        <img src="assets/images/hariyali/ajay_imagesss.jpg" alt="">
+                    </div>
+                    <div class="team-card__content">
+                        <h3>Vijay Prasad</h3>
+                        <h6>Role: CTO</h6>
                         <div class="team-card__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook-square"></i></a>

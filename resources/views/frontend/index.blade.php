@@ -17,34 +17,48 @@
 "loop": true,
 "effect": "fade",
 "autoplay": {
-"delay": 5000
+"delay": 29000
 },
 "navigation": {
 "nextEl": "#main-slider__swiper-button-next",
 "prevEl": "#main-slider__swiper-button-prev"
 }
 }'>
-        <!--      style="background-image: url(assets/images/main-slider/main-slider-1-1.jpg); -->
-        <!-- style="background-image: url(assets/images/hariyali/paypamain2.jpg); -->
-        <!--   style="background-image: url(assets/images/hariyali/papaya2.png); -->
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="image-layer" style="background-image: url(assets/images/hariyali/home1.jpg);  ">
+                <div class="image-layer">
+                    <video autoplay muted loop>
+                        <source src="assets/images/video/intro.mp4" type="video/mp4">
+                        <source src="assets/images/video/intro.mp4" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 text-center">
-                            <h2><span> Welcome to</span> <br>
-                                Hariyalikart</h2>
-                            <a href="products.html" class=" thm-btn">Order Now</a>
-
+                            <h2><span> </span> <br>
+                            </h2>
                         </div>
                     </div>
                 </div>
-                <!-- /.container -->
+
+            </div>
+            <div class="swiper-slide">
+                <div class="image-layer" style="background-image: url(assets/images/hariyali/front2.jpg);">
+                </div>
+                <!-- /.image-layer -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 text-center">
+                            <h2><span>Latest Agricultural</span> <br>
+                                Techniques</h2>
+                            <a href="contact.html" class=" thm-btn">Order Now</a>
+                            <!-- /.thm-btn dynamic-radius -->
+                        </div><!-- /.col-lg-7 text-right -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
             </div><!-- /.swiper-slide -->
-            <!-- style="background-image: url(assets/images/main-slider/main-slider-1-2.jpg);" -->
             <div class="swiper-slide">
                 <div class="image-layer" style="background-image: url(assets/images/hariyali/front2.jpg);">
                 </div>
