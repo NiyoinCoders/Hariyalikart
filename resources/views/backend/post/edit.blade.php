@@ -78,7 +78,11 @@
           <div class="input-group">
 
           <input id="thumbnail" class="form-control" type="file" name="photo" value="{{$post->photo}}">
+         
         </div>
+        @if($post->photo)
+            <img width="100px" src="{{ ($post->photo) }}" alt="blog Image">
+                                    @endif
         <div id="holder" style="margin-top:15px;max-height:100px;"></div>
 
           @error('photo')

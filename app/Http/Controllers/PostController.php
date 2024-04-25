@@ -70,12 +70,13 @@ exit();
     } */
 
     $data=$request->all();
+    if($request->hasFile('photo')){
         $photo = $request->file('photo');
         $image_name = date('YmdHis') . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
         $photo->move(public_path('blog'), $image_name);
         $data['photo'] =  $url = URL::to("/blog/$image_name");
     
-
+    }
    /*  if($data['photo']){
         $data['photo'] = "/blog/" . $image_name;
     } */
@@ -162,10 +163,12 @@ exit();
         ]);
 
         $data=$request->all();
+        if($request->hasFile('photo')){
         $photo = $request->file('photo');
         $image_name = date('YmdHis') . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
         $photo->move(public_path('blog'), $image_name);
         $data['photo'] =  $url = URL::to("/blog/$image_name");
+        }
         $data['title']=$request->title;
         $slug=Str::slug($request->title);
         $count=Post::where('slug',$slug)->count();

@@ -136,6 +136,23 @@
                     <option value="arabic">Arabic</option>
                 </select>
             </div><!-- /.main-menu__language --> --}}
+
+            <div class="main-menu__language ">
+                <ul class="main-menu__list" >
+                <li class="dropdown">
+                    <a href="#">Language</a>
+                    <ul>
+                        <li> <a href="#"  data-google-lang="hi" >
+                             हिन्दी
+                        </a></li>
+                        <li><a href="#" data-google-lang="en"  >
+                            English
+                        </a></li>
+
+                    </ul>
+                </li>
+            </ul>
+            </div>
         </div><!-- /.container -->
     </nav>
     <!-- /.main-menu -->
